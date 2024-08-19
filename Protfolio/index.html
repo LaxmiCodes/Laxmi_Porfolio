@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Engineering Student</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+        .hover-zoom:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold fade-in">Engineering Student Portfolio</h1>
+            <nav>
+                <a href="#about" class="px-3 hover:underline">About</a>
+                <a href="#skills" class="px-3 hover:underline">Skills</a>
+                <a href="#projects" class="px-3 hover:underline">Projects</a>
+                <a href="#certificates" class="px-3 hover:underline">Certificates</a>
+                <a href="#contact" class="px-3 hover:underline">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto mt-8">
+        <!-- About Section -->
+        <section id="about" class="py-12 fade-in">
+            <h2 class="text-4xl font-bold mb-6 text-center">About Me</h2>
+            <p class="text-lg text-center max-w-3xl mx-auto">
+                I am an engineering student with a strong passion for software development. Having completed a Java Full Stack Developer course, I possess comprehensive skills in front-end and back-end technologies. I am driven by a love for coding and problem-solving, always eager to take on new challenges.
+            </p>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-12 bg-gray-200 fade-in">
+            <h2 class="text-4xl font-bold mb-6 text-center">Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-6 bg-white rounded shadow hover-zoom">Core Java</div>
+                <div class="p-6 bg-white rounded shadow hover-zoom">Advanced Java</div>
+                <div class="p-6 bg-white rounded shadow hover-zoom">HTML</div>
+                <div class="p-6 bg-white rounded shadow hover-zoom">CSS</div>
+                <div class="p-6 bg-white rounded shadow hover-zoom">JavaScript</div>
+                <div class="p-6 bg-white rounded shadow hover-zoom">Angular</div>
+                <div class="p-6 bg-white rounded shadow hover-zoom">Python</div>
+                <div class="p-6 bg-white rounded shadow hover-zoom">Spring Boot</div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-12 fade-in">
+            <h2 class="text-4xl font-bold mb-6 text-center">Projects</h2>
+            <div class="space-y-8">
+                <div class="bg-white rounded shadow-lg p-6 hover-zoom">
+                    <h3 class="text-2xl font-bold mb-2">Transportation Management System</h3>
+                    <p>
+                        A comprehensive project aimed at streamlining transportation logistics. I played a key role in developing the backend using Java and Spring Boot, ensuring seamless data management and process automation.
+                    </p>
+                </div>
+                <div class="bg-white rounded shadow-lg p-6 hover-zoom">
+                    <h3 class="text-2xl font-bold mb-2">Online Book Store</h3>
+                    <p>
+                        Developed a fully functional online bookstore application using Java, Spring Boot, and Angular. This project involved creating user interfaces, managing databases, and implementing secure transaction processing.
+                    </p>
+                </div>
+                <div class="bg-white rounded shadow-lg p-6 hover-zoom">
+                    <h3 class="text-2xl font-bold mb-2">Portfolio Website</h3>
+                    <p>
+                        Created a personal portfolio website using modern web technologies like HTML5, Tailwind CSS, and JavaScript, showcasing my projects, skills, and contact information.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificates Section -->
+        <section id="certificates" class="py-12 bg-gray-200 fade-in">
+            <h2 class="text-4xl font-bold mb-6 text-center">Certificates</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded shadow-lg p-4 hover-zoom">
+                    <img src="certificate1.jpg" alt="Certificate 1" class="w-full h-auto rounded mb-2">
+                    <h3 class="text-xl font-bold">Java Full Stack Developer Certificate</h3>
+                </div>
+                <div class="bg-white rounded shadow-lg p-4 hover-zoom">
+                    <img src="certificate2.jpg" alt="Certificate 2" class="w-full h-auto rounded mb-2">
+                    <h3 class="text-xl font-bold">Python Programming Certificate</h3>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-12 fade-in">
+            <h2 class="text-4xl font-bold mb-6 text-center">Contact Me</h2>
+            <form id="contact-form" class="bg-white p-8 rounded shadow-lg max-w-lg mx-auto">
+                <div class="mb-4">
+                    <label class="block mb-2 font-bold" for="name">Name</label>
+                    <input class="w-full p-3 border border-gray-300 rounded" type="text" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block mb-2 font-bold" for="email">Email</label>
+                    <input class="w-full p-3 border border-gray-300 rounded" type="email" id="email" placeholder="Your Email" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block mb-2 font-bold" for="message">Message</label>
+                    <textarea class="w-full p-3 border border-gray-300 rounded" id="message" rows="4" placeholder="Your Message" required></textarea>
+                </div>
+                <button class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded hover:from-blue-600 hover:to-purple-700" type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-8 mt-12">
+        <div class="container mx-auto text-center">
+            <div class="mb-4">
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="text-white mx-2 hover:underline">LinkedIn</a>
+                <a href="https://github.com/yourusername" target="_blank" class="text-white mx-2 hover:underline">GitHub</a>
+                <a href="mailto:yourname@example.com" class="text-white mx-2 hover:underline">Email</a>
+            </div>
+            <p>&copy; 2024 Engineering Student. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
